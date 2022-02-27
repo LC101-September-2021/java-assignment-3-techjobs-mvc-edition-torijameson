@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
+    <link rel="carly's adds" href="job-styles.css">
 </head>
 <body>
 
@@ -11,7 +12,30 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
+    <p>
+        <span th:text="List of ${columnChoices: tableChoices} "></span>
+    </p>
 
+    <div> //th:if="${ not# list.isEmpty(jobs)}">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Employer</th>
+                <th>Location</th>
+                <th>Position Type</th>
+                <th>Skill</th>
+            </tr>
+            <tr th:each="jobs : ${ListController}">
+                <td th:text="${ListController.ID}"></td>
+                <td th:text="${ListController.title}"></td>
+                <td th:text="${ListController.employer}"></td>
+                <td th:text="${ListController.location}"></td>
+                <td th:text="${ListController.positionType}"></td>
+                <td th:text="${ListController.coreCompetency}"></td>
+            </tr>
+        </table>
+    </div>
 </div>
 
 </body>

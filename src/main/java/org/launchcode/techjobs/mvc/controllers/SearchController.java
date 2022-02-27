@@ -22,5 +22,9 @@ public class SearchController {
     }
 
     // TODO #3 - Create a handler to process a search request and render the updated search view.
-
+/* <form th:action="@{/search}" method="get">
+  <input type="text" name="keyword" th:value="${keyword}"  placeholder="Find by Owner Name & Shop Type" size="50" >
+  <button type="submit" class="btn btn-info" >Search</button>
+  <button type="submit" class="btn btn-info" >Reset</button>
+  </form> */
 }
