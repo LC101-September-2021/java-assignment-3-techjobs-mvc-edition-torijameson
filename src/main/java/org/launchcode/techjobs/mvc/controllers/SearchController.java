@@ -39,6 +39,7 @@ public class SearchController {
         model.addAttribute("jobs", jobs);
 
         return "search";
+
 //<table>
 //    <tr th:each="searchType, searchTerm : ${search/model}">
 //            <td>
